@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Register page</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="reg.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: brown;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .display {
+            width: 400px;
+            margin: 50px auto;
+            background: rgb(224, 211, 211);
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-top: 4px;
+        }
+        button {
+            padding: 8px;
+            background: brown;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<h1>REGISTRATION PORTAL</h1>
+
+<div class="display">
+    <h2 style="text-align: center;">Register</h2>
+    <form onsubmit="Register(event)">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p style="text-align: center;">
+        Already have an account? <a href="LoginPage.html">Login here</a>
+    </p>
+</div>
+
+</body>
+</html>

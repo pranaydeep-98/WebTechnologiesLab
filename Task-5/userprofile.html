@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>User Profile</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="profile.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: brown;
+            text-align: center;
+        }
+        .form-container {
+            width: 300px;
+            margin: 50px auto;
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        input {
+            width: 95%;
+            padding: 5px;
+            margin: 6px 0;
+        }
+        button {
+            width: 100%;
+            padding: 6px;
+            background: brown;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>USER PROFILE</h1>
+
+<div class="form-container">
+    <form onsubmit="saveProfile(event)">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <button type="submit">Save Profile</button>
+        <p id="msg"></p>
+    </form>
+</div>
+
+<p>Don't have an account? <a href="registration.html">Register here</a></p>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+            .calculator {
+                    background: #101010;
+                    width: 320px;
+                    margin: 40px auto;
+                    padding: 20px;
+                    border-radius: 16px;
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                }
+            #display{
+                     text-align: right;
+                    font-size: 2rem;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    color: aliceblue;
+                    min-height: 50px;
+                    overflow-x: auto;
+            }
+            .btn{
+                text-align: center;    
+                border-radius: 100%;
+                font-weight: 300;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+                font-size: x-large;
+                border: 2px solid rgb(251, 246, 246);
+                padding: 10px 10px 10px 10px;
+                cursor: pointer;
+                color: aliceblue;
+                background-color:black;
+            
+            }
+
+            .buttoncontainer{
+                padding-left: auto;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+                
+            }
+
+         </style>
+    </head>
+    <body >
+        
+        <div class="calculator">
+            <div><h3 style="color: rgb(206, 208, 216); text-align: center; font-size: xx-large;"; width="100px">calculator</h3></div>
+             <div id="display">0</div>
+             <div class="buttoncontainer">
+                <button class="btn clear" onclick="clearDisplay()">AC</button>
+                <button class="btn" onclick="deleteLast()">←</button>
+                <button class="btn operator" onclick="appendValue('%')">%</button>
+                <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+                <button class="btn" onclick="appendValue('7')">7</button>
+                <button class="btn" onclick="appendValue('8')">8</button>
+                <button class="btn" onclick="appendValue('9')">9</button>
+                <button class="btn operator" onclick="appendValue('*')">×</button>
+
+                <button class="btn" onclick="appendValue('4')">4</button>
+                <button class="btn" onclick="appendValue('5')">5</button>
+                <button class="btn" onclick="appendValue('6')">6</button>
+                <button class="btn operator" onclick="appendValue('-')">−</button>
+
+                <button class="btn" onclick="appendValue('1')">1</button>
+                <button class="btn" onclick="appendValue('2')">2</button>
+                <button class="btn" onclick="appendValue('3')">3</button>
+                <button class="btn operator" onclick="appendValue('+')">+</button>
+
+                <button class="btn" onclick="appendValue('00')">00</button>
+                <button class="btn" onclick="appendValue('0')">0</button>
+                <button class="btn" onclick="appendValue('.')">.</button>
+                <button class="btn equal" onclick="calculate()">=</button>
+
+        </div>
+        </div>
+        
+        <script>
+             function clearDisplay() {
+                    display.textContent = "0";
+             }
+             function deleteLast() {
+                if (display.textContent.length === 1 || display.textContent === "Error") {
+                    display.textContent = "0";
+                } else {
+                    display.textContent = display.textContent.slice(0, -1);
+                }
+             }   
+             function appendValue(val){
+                if(display.textContent==="0"){
+                    display.textContent=val;
+                }else{
+                     display.textContent+=val;
+                }
+             }
+             function calculate(){
+                     try {
+                        let expression = display.textContent
+                            .replace(/÷/g, "/")
+                            .replace(/×/g, "*");
+                        let result = eval(expression);
+                        if (result === Infinity || isNaN(result)) {
+                            display.textContent = "Error";
+                        } else {
+                            display.textContent = result;
+                        }
+                    } catch {
+                        display.textContent = "Error";
+                    }
+             }
+        </script>
+    </body>
+</html>
