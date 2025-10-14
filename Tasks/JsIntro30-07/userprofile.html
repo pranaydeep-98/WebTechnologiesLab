@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Login page</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="log.js"></script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            }
+			.center {
+			    display: block;
+			    margin-left: auto;
+			    margin-right: auto;
+			 }
+             h1{
+                color:brown;
+             }
+		</style>
+    </head>
+    <body>
+    <h1 align="center">CVR LOGIN PORTAL</h1>
+    <div style="width: 300px; margin: 50px auto;" class="display">
+    <form >
+        <h2 style="text-align: center;">Create Your Profile</h2>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required style="width: 100%;"/><br><br>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required style="width: 100%;"/><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%;"/><br><br>
+        <label for="username">Username:</label><br>
+        <input type="username" id="username" name="username" required style="width: 100%;"/><br><br>
+        <button type="submit" onclick="profileCreation()" style="width: 100%;">Create Profile</button>
+        <p id="demo"></p>
+    </form>
+    </div>
+    </body>
+    <p align="center">Don't have an account?<a href="register.html">Register here</a></p>
+    </div>
+    </body>
+</html>

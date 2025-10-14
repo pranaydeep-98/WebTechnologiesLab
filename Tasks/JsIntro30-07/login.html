@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Login page</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="log.js"></script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            }
+			.center {
+			    display: block;
+			    margin-left: auto;
+			    margin-right: auto;
+			 }
+             h1{
+                color:brown;
+             }
+		</style>
+    </head>
+    <body>
+    <h1 align="center">CVR LOGIN PORTAL</h1>
+    <div style="width: 300px; margin: 50px auto;">
+    <form align="center">
+      <h2 style="text-align: center;">Login Page</h2>
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" required style="width: 90%;" placeholder="USERNAME" /><br><br>
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" required style="width:90%;" placeholder="PASSOWRD"/><br><br>
+      <button type="submit" onclick="loginDetection()" style="width: 60%;">Login</button>
+      <p id="demo"></p>
+    </form>
+    <p align="center">Don't have an account?<a href="register.html">Register here</a></p>
+    </div>
+    </body>
+</html>

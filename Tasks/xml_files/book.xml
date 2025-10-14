@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books SYSTEM "books.dtd">
+<books>
+    <book>
+        <title>Introduction to XML</title>
+        <author>John Doe</author>
+        <isbn>1234</isbn>
+        <publisher>ABC Publishers</publisher>
+        <edition>2nd</edition>
+        <price>499</price>
+    </book>
+    <book>
+        <title>Learning Python</title>
+        <author>Jane Smith</author>
+        <isbn>1235</isbn>
+        <publisher>XYZ Books</publisher>
+        <edition>5th</edition>
+        <price>799</price>
+    </book>
+</books>

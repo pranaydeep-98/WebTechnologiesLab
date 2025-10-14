@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="book1.xsd">
+    <book>
+        <title>Introduction to XML</title>
+        <author>John Doe</author>
+        <isbn>1234</isbn>
+        <publisher>ABC Publishers</publisher>
+        <edition>2nd</edition>
+        <price>499</price>
+    </book>
+    <book>
+        <title>Learning Python</title>
+        <author>Jane Smith</author>
+        <isbn>1235</isbn>
+        <publisher>XYZ Books</publisher>
+        <edition>5th</edition>
+        <price>799</price>
+    </book>
+</books>

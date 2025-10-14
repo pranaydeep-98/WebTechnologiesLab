@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body onload="alert('Page loaded!')" onresize="alert('Window resized!')">
+    <h1>HTML EVENTS</h1>
+    <button onclick="alert('Button clicked!')">CLICK ME!</button><br>
+    <img src="image.gif" onerror="alert('Image failed to load!')" alt="Sample Image"><br>
+    <h1>On Submit and OnReset</h1>
+    <form onsubmit="alert('Form submitted!'); return false;">
+        <input type="text" placeholder="Enter your name" required>
+        <input type="submit" value="Submit Form">
+        <input type="reset" value="Reset Form">
+    </form><br>
+    <h1>Keyboard Events</h1>
+    <input type="text" onkeydown="alert('Key down!')" onkeyup="alert('Key up!')" placeholder="Type something..."><br>
+    <input type="text" onkeypress="alert('Key pressed!')" placeholder="Press a key..."><br>
+    <h1>Mouse Events</h1>
+    <p onmouseover="alert('Mouse over paragraph!')">Hover over this paragraph to see an event.</p>
+    <p onmouseout="alert('Mouse left paragraph!')">Move your mouse away from this paragraph.</p>
+    <p onmousedown="alert('Mouse button pressed!')">Press the mouse button on this paragraph.</p>
+    <div id="hover" onclick="mouseClick()" onmouseover="mouseHover()">
+        Hover Click me
+    </div>
+    <input type="text" value="Try to copy this text" oncopy="alert('You copied the text!')">
+    <script>
+        function mouseHover() {
+            document.getElementById("hover").innerHTML = "Mouse is hovering!";
+        }
+        function mouseClick() {
+            document.getElementById("hover").innerHTML = "Mouse clicked!";
+        }
+    </script>
+</body>
+</html>

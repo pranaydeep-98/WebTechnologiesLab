@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Login page</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="reg.js"></script>
+        <style>
+			 body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            }
+			.center {
+			    display: block;
+			    margin-left: auto;
+			    margin-right: auto;
+			 }
+             h1{
+                color:brown;
+             }
+		</style>
+    </head>
+    <body>
+    <h1 align="center">CVR REGISTRATION PORTAL</h1>
+    <div style="width: 300px; margin: 50px auto;" class="display">
+    <h2 style="text-align: center;">Register</h2>
+    <form>
+      <label for="fullname">Full Name:</label><br />
+      <input type="text" id="fullname" name="fullname" required style="width: 100%;" /><br><br>
+      <label for="email">Email Address:</label><br />
+      <input type="email" id="email" name="email" required style="width: 100%;" /><br><br>
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" required style="width: 100%;" /><br><br>
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" required style="width: 100%;"><br><br>
+      <label for="confirm_password">Confirm Password:</label><br />
+      <input type="password" id="confirm_password" name="confirm_password" required style="width: 100%;" /><br><br>
+      <button type="submit" onclick="Register()" style="width: 100%;">Register</button>
+      <p id="demo" align="center"></p>
+    </form>
+    <p style="text-align: center;">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+    </body>
+</html>
